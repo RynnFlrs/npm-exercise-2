@@ -1,9 +1,5 @@
 const process = require('process');
-const argProcess = process.argv;
-const arguments = [];
-for (let i = 2; i < argProcess.length; i++){
-    arguments.push(argProcess[i])
-}
+const [ , , ...arguments] = process.argv;
 
 const countArgs =  arguments.length;
 const joinArgs =  arguments.join(' ');
